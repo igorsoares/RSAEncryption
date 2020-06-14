@@ -1,0 +1,11 @@
+C:\Users\Ígor Henrique\source\repos\RSAEncrypt\RSAEncrypt\bin\Debug\RSAEncrypt.exe.config
+C:\Users\Ígor Henrique\source\repos\RSAEncrypt\RSAEncrypt\bin\Debug\RSAEncrypt.exe
+C:\Users\Ígor Henrique\source\repos\RSAEncrypt\RSAEncrypt\bin\Debug\RSAEncrypt.pdb
+C:\Users\Ígor Henrique\source\repos\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.csprojAssemblyReference.cache
+C:\Users\Ígor Henrique\source\repos\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.Properties.Resources.resources
+C:\Users\Ígor Henrique\source\repos\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.csproj.GenerateResource.cache
+C:\Users\Ígor Henrique\source\repos\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.exe
+C:\Users\Ígor Henrique\source\repos\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.pdb
+C:\Users\Ígor Henrique\source\repos\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.FORMS.GenerateKey.resources
+C:\Users\Ígor Henrique\source\repos\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.MainMenu.resources
+C:\Users\Ígor Henrique\source\repos\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.FORMS.MyKeys.resources
