@@ -46,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -54,6 +55,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.btDecrypt);
             this.panel1.Controls.Add(this.btEncrypt);
@@ -103,6 +105,7 @@
             this.btMyKeys.TabIndex = 1;
             this.btMyKeys.Text = "Show my Keys";
             this.btMyKeys.UseVisualStyleBackColor = true;
+            this.btMyKeys.Click += new System.EventHandler(this.btMyKeys_Click);
             // 
             // btGenerate
             // 
@@ -127,7 +130,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.DarkBlue;
+            this.tabPage2.BackColor = System.Drawing.Color.DarkCyan;
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label7);
@@ -212,7 +215,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "v1.0";
+            this.label3.Text = "v1.1";
             // 
             // label2
             // 
@@ -242,6 +245,16 @@
             this.tabPage1.Size = new System.Drawing.Size(422, 233);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Help";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(37, 13);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 13);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "MENU";
             // 
             // MainMenu
             // 
@@ -288,6 +301,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
 

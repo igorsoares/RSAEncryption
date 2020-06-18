@@ -8,11 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Security.Cryptography;
+using RSAEncrypt.ACTIONS;
 namespace RSAEncrypt
 {
     public partial class MainMenu : Form
     {
+        RSACryptoServiceProvider mainRSAObj = new RSACryptoServiceProvider();
+        Gen_Rec mainGen = new Gen_Rec();
+        
         public MainMenu()
         {
             InitializeComponent();
@@ -25,9 +29,18 @@ namespace RSAEncrypt
 
         private void btGenerate_Click(object sender, EventArgs e)
         {
-            GenerateKey obj = new GenerateKey();
+            GenerateKey obj = new GenerateKey(mainGen);
             this.Hide();
             obj.ShowDialog();
+            mainGen = obj.ReturnGen();
+            this.Show();
+        }
+
+        private void btMyKeys_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MyKeys mK = new MyKeys(mainGen);
+            mK.ShowDialog();
             this.Show();
         }
     }

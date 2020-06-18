@@ -8,11 +8,18 @@ using System.Security.Cryptography;
 
 namespace RSAEncrypt.ACTIONS
 {
+    [Serializable]
+
     public class Gen_Rec
     {
+        
         public RSACryptoServiceProvider mainRSA;
-        public string publicKey = null;
-        public string privateKey = null;
+        public string publicKey { get; set; }
+        public string privateKey { get; set; }
+        public Gen_Rec()
+        {
+
+        }
         public Gen_Rec(RSACryptoServiceProvider tmpRSA)
         {
             mainRSA = tmpRSA;
@@ -20,5 +27,10 @@ namespace RSAEncrypt.ACTIONS
             privateKey = mainRSA.ToXmlString(true);
         }
         
+        public RSACryptoServiceProvider Rcv_obj()
+        {
+            return mainRSA;
+        }
+
     }
 }

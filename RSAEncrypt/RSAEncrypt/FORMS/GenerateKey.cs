@@ -11,30 +11,37 @@ using System.Security.Cryptography;
 using RSAEncrypt.ACTIONS;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml;
+using System.Xml.Serialization;
+
 
 namespace RSAEncrypt.FORMS
 {
     public partial class GenerateKey : Form
     {
         public Gen_Rec persistencia;
-        public GenerateKey()
+        RSACryptoServiceProvider mainRSA;
+        public GenerateKey(Gen_Rec rcvGen)
         {
             InitializeComponent();
+            persistencia = rcvGen;
             cbLenght.SelectedIndex = 0;
         }
 
-        public void SerializaObjeto(Gen_Rec obj)
+        public Gen_Rec ReturnGen()
         {
-        
-                
+            return persistencia;
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            RSACryptoServiceProvider myRsa = new RSACryptoServiceProvider(Int32.Parse(cbLenght.SelectedItem.ToString()));
-            Gen_Rec obj = new Gen_Rec(myRsa);
-            tbPublic.Text = obj.publicKey;
-            tbPrivate.Text = obj.privateKey;
-            persistencia = obj;
+            // OBJETO MAIS IMPORTANTE.
+            mainRSA = new RSACryptoServiceProvider(Int32.Parse(cbLenght.SelectedItem.ToString()));
+            persistencia = new Gen_Rec(mainRSA);
+            tbPublic.Text = persistencia.publicKey;
+            tbPrivate.Text = persistencia.privateKey;
+            
+            
         }
     }
 }
