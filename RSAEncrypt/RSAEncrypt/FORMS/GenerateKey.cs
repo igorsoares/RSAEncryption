@@ -25,7 +25,31 @@ namespace RSAEncrypt.FORMS
         {
             InitializeComponent();
             persistencia = rcvGen;
-            cbLenght.SelectedIndex = 0;
+            try
+            {
+                if (rcvGen.mainRSA.KeySize > 1)
+                {
+                    // significa que há chaves geradas ja
+                    tbPublic.Text = rcvGen.mainRSA.ToXmlString(false);
+                    tbPrivate.Text = rcvGen.mainRSA.ToXmlString(true);
+
+                    btCopiar.Enabled = true;
+                    btCopiarPrivada.Enabled = true;
+                    btSalvarComoPub.Enabled = true;
+                    btSalvarComoPriv.Enabled = true;
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                cbLenght.SelectedIndex = 0;
+            }
+            
+
+            
         }
 
         public Gen_Rec ReturnGen()
@@ -40,6 +64,11 @@ namespace RSAEncrypt.FORMS
             persistencia = new Gen_Rec(mainRSA);
             tbPublic.Text = persistencia.publicKey;
             tbPrivate.Text = persistencia.privateKey;
+
+            btCopiar.Enabled = true;
+            btCopiarPrivada.Enabled = true;
+            btSalvarComoPub.Enabled = true;
+            btSalvarComoPriv.Enabled = true;
             
             
         }

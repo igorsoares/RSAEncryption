@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ACTIONS\Gen-Rec.cs" />
+    <Compile Include="FORMS\Criptografar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Criptografar.Designer.cs">
+      <DependentUpon>Criptografar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\GenerateKey.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORMS\Criptografar.resx">
+      <DependentUpon>Criptografar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\GenerateKey.resx">
       <DependentUpon>GenerateKey.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +93,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -97,6 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\github-153-675523.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-drawing-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,6 +36,7 @@
             // 
             // tbPublic
             // 
+            this.tbPublic.BackColor = System.Drawing.Color.Gray;
             this.tbPublic.Location = new System.Drawing.Point(28, 34);
             this.tbPublic.Multiline = true;
             this.tbPublic.Name = "tbPublic";
@@ -46,6 +47,7 @@
             // 
             // tbPrivate
             // 
+            this.tbPrivate.BackColor = System.Drawing.Color.Gray;
             this.tbPrivate.Location = new System.Drawing.Point(502, 35);
             this.tbPrivate.Multiline = true;
             this.tbPrivate.Name = "tbPrivate";
@@ -76,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(999, 519);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
