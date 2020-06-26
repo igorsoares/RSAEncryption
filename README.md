@@ -14,6 +14,8 @@
  * You can also import key's to encrypt/decrypt data.
  * You can copy public key.
  * You can copy private key.
+ * You can save public key in a file.
+ * You can save private key in a file.
  
 ### Run it
  To run RSAEncryption you must have .NET installed, running on a Windows system or Linux with Mono.
