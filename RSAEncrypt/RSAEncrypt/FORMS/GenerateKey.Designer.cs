@@ -31,6 +31,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbLenght = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btSalvarComoPriv = new System.Windows.Forms.Button();
+            this.btCopiarPrivada = new System.Windows.Forms.Button();
             this.btCopiar = new System.Windows.Forms.Button();
             this.btSalvarComoPub = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -39,8 +41,6 @@
             this.tbPrivate = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btCopiarPrivada = new System.Windows.Forms.Button();
-            this.btSalvarComoPriv = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             // 
             // cbLenght
             // 
-            this.cbLenght.BackColor = System.Drawing.Color.Gray;
+            this.cbLenght.BackColor = System.Drawing.Color.DarkGray;
             this.cbLenght.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbLenght.FormattingEnabled = true;
             this.cbLenght.Items.AddRange(new object[] {
@@ -86,6 +86,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "You can...";
             // 
+            // btSalvarComoPriv
+            // 
+            this.btSalvarComoPriv.Enabled = false;
+            this.btSalvarComoPriv.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btSalvarComoPriv.Location = new System.Drawing.Point(6, 96);
+            this.btSalvarComoPriv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btSalvarComoPriv.Name = "btSalvarComoPriv";
+            this.btSalvarComoPriv.Size = new System.Drawing.Size(221, 28);
+            this.btSalvarComoPriv.TabIndex = 3;
+            this.btSalvarComoPriv.Text = "Save private key as";
+            this.btSalvarComoPriv.UseVisualStyleBackColor = true;
+            this.btSalvarComoPriv.Click += new System.EventHandler(this.btSalvarComoPriv_Click);
+            // 
+            // btCopiarPrivada
+            // 
+            this.btCopiarPrivada.Enabled = false;
+            this.btCopiarPrivada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btCopiarPrivada.Location = new System.Drawing.Point(119, 24);
+            this.btCopiarPrivada.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btCopiarPrivada.Name = "btCopiarPrivada";
+            this.btCopiarPrivada.Size = new System.Drawing.Size(107, 28);
+            this.btCopiarPrivada.TabIndex = 2;
+            this.btCopiarPrivada.Text = "Copy private";
+            this.btCopiarPrivada.UseVisualStyleBackColor = true;
+            this.btCopiarPrivada.Click += new System.EventHandler(this.btCopiarPrivada_Click);
+            // 
             // btCopiar
             // 
             this.btCopiar.Enabled = false;
@@ -97,6 +123,7 @@
             this.btCopiar.TabIndex = 1;
             this.btCopiar.Text = "Copy public";
             this.btCopiar.UseVisualStyleBackColor = true;
+            this.btCopiar.Click += new System.EventHandler(this.btCopiar_Click);
             // 
             // btSalvarComoPub
             // 
@@ -109,6 +136,7 @@
             this.btSalvarComoPub.TabIndex = 0;
             this.btSalvarComoPub.Text = "Save public key as";
             this.btSalvarComoPub.UseVisualStyleBackColor = true;
+            this.btSalvarComoPub.Click += new System.EventHandler(this.btSalvarComoPub_Click);
             // 
             // groupBox2
             // 
@@ -126,10 +154,10 @@
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(46, 73);
+            this.button3.Location = new System.Drawing.Point(30, 73);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 28);
+            this.button3.Size = new System.Drawing.Size(138, 28);
             this.button3.TabIndex = 3;
             this.button3.Text = "Generate";
             this.button3.UseVisualStyleBackColor = true;
@@ -137,7 +165,7 @@
             // 
             // tbPublic
             // 
-            this.tbPublic.BackColor = System.Drawing.Color.Gray;
+            this.tbPublic.BackColor = System.Drawing.Color.DarkGray;
             this.tbPublic.Location = new System.Drawing.Point(260, 28);
             this.tbPublic.Multiline = true;
             this.tbPublic.Name = "tbPublic";
@@ -148,7 +176,7 @@
             // 
             // tbPrivate
             // 
-            this.tbPrivate.BackColor = System.Drawing.Color.Gray;
+            this.tbPrivate.BackColor = System.Drawing.Color.DarkGray;
             this.tbPrivate.Location = new System.Drawing.Point(513, 28);
             this.tbPrivate.Multiline = true;
             this.tbPrivate.Name = "tbPrivate";
@@ -174,30 +202,6 @@
             this.label4.Size = new System.Drawing.Size(82, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Private key";
-            // 
-            // btCopiarPrivada
-            // 
-            this.btCopiarPrivada.Enabled = false;
-            this.btCopiarPrivada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btCopiarPrivada.Location = new System.Drawing.Point(119, 24);
-            this.btCopiarPrivada.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btCopiarPrivada.Name = "btCopiarPrivada";
-            this.btCopiarPrivada.Size = new System.Drawing.Size(107, 28);
-            this.btCopiarPrivada.TabIndex = 2;
-            this.btCopiarPrivada.Text = "Copy private";
-            this.btCopiarPrivada.UseVisualStyleBackColor = true;
-            // 
-            // btSalvarComoPriv
-            // 
-            this.btSalvarComoPriv.Enabled = false;
-            this.btSalvarComoPriv.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btSalvarComoPriv.Location = new System.Drawing.Point(6, 96);
-            this.btSalvarComoPriv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btSalvarComoPriv.Name = "btSalvarComoPriv";
-            this.btSalvarComoPriv.Size = new System.Drawing.Size(221, 28);
-            this.btSalvarComoPriv.TabIndex = 3;
-            this.btSalvarComoPriv.Text = "Save private key as";
-            this.btSalvarComoPriv.UseVisualStyleBackColor = true;
             // 
             // GenerateKey
             // 

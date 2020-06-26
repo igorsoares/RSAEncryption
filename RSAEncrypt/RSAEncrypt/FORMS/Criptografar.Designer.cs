@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelStatus = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btCopy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // 
             // tbOriginal
             // 
-            this.tbOriginal.BackColor = System.Drawing.Color.Gray;
+            this.tbOriginal.BackColor = System.Drawing.Color.DarkGray;
             this.tbOriginal.Location = new System.Drawing.Point(12, 38);
             this.tbOriginal.Multiline = true;
             this.tbOriginal.Name = "tbOriginal";
@@ -59,7 +60,7 @@
             // 
             // tbOutput
             // 
-            this.tbOutput.BackColor = System.Drawing.Color.Gray;
+            this.tbOutput.BackColor = System.Drawing.Color.DarkGray;
             this.tbOutput.Location = new System.Drawing.Point(344, 38);
             this.tbOutput.Multiline = true;
             this.tbOutput.Name = "tbOutput";
@@ -90,7 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(222, 193);
+            this.label3.Location = new System.Drawing.Point(222, 216);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 5;
@@ -99,7 +100,7 @@
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(257, 193);
+            this.labelStatus.Location = new System.Drawing.Point(257, 216);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(10, 13);
             this.labelStatus.TabIndex = 6;
@@ -115,12 +116,25 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // btCopy
+            // 
+            this.btCopy.Enabled = false;
+            this.btCopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btCopy.Location = new System.Drawing.Point(244, 190);
+            this.btCopy.Name = "btCopy";
+            this.btCopy.Size = new System.Drawing.Size(75, 23);
+            this.btCopy.TabIndex = 8;
+            this.btCopy.Text = "Copy Output";
+            this.btCopy.UseVisualStyleBackColor = true;
+            this.btCopy.Click += new System.EventHandler(this.btCopy_Click);
+            // 
             // Criptografar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(566, 266);
+            this.Controls.Add(this.btCopy);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.label3);
@@ -129,9 +143,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbOriginal);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Criptografar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Criptografar";
+            this.Text = "Encrypt";
             this.Load += new System.EventHandler(this.Criptografar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -149,5 +166,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btCopy;
     }
 }

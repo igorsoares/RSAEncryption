@@ -72,5 +72,81 @@ namespace RSAEncrypt.FORMS
             
             
         }
+
+        private void btSalvarComoPub_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(tbPublic.Text))
+                return;
+            using (SaveFileDialog ofd = new SaveFileDialog())
+            {
+                string dir = @"c:\users\" + Environment.UserName + @"\desktop\";
+                ofd.Title = "Save as";
+                ofd.Filter = "All|*.*";
+                ofd.FileName = "PublicKey.txt";
+                ofd.InitialDirectory=dir;
+                ofd.ShowDialog();
+
+                using(StreamWriter writer = new StreamWriter(ofd.FileName))
+                {
+                    try {
+                        writer.Write(tbPublic.Text);
+                        writer.Close();
+                        MessageBox.Show("Public key saved.", "Warning", MessageBoxButtons.OK);
+                    } catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error");
+                        return;
+                    }
+                    
+                    
+                }
+
+            }
+            
+                
+        }
+
+        private void btSalvarComoPriv_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(tbPrivate.Text))
+                return;
+            using (SaveFileDialog ofd = new SaveFileDialog())
+            {
+                string dir = @"c:\users\" + Environment.UserName + @"\desktop\";
+                ofd.Title = "Save as";
+                ofd.Filter = "All|*.*";
+                ofd.FileName = "PrivateKey.txt";
+                ofd.InitialDirectory = dir;
+                ofd.ShowDialog();
+
+                using (StreamWriter writer = new StreamWriter(ofd.FileName))
+                {
+                    try
+                    {
+                        writer.Write(tbPrivate.Text);
+                        writer.Close();
+                        MessageBox.Show("Private key saved.", "Warning", MessageBoxButtons.OK);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error");
+                        return;
+                    }
+
+
+                }
+
+            }
+        }
+
+        private void btCopiar_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbPublic.Text);
+        }
+
+        private void btCopiarPrivada_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbPrivate.Text);
+        }
     }
 }

@@ -44,6 +44,7 @@ namespace RSAEncrypt.FORMS
 
         private void btEncrypt_Click(object sender, EventArgs e)
         {
+            btCopy.Enabled = true;
             if(tbOriginal.Text.Length == 0)
             {
                 labelStatus.Text = "Empty text";
@@ -55,6 +56,12 @@ namespace RSAEncrypt.FORMS
             tbOutput.Text = Convert.ToBase64String(encrypted);
 
 
+        }
+
+        private void btCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbOutput.Text);
+            labelStatus.Text = "Copied";
         }
     }
 }

@@ -114,5 +114,14 @@
   <ItemGroup>
     <None Include="Resources\arrow-drawing-1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram-sketched.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram-bw.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

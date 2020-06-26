@@ -78,5 +78,21 @@ namespace RSAEncrypt
 
 
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.instagram.com/igorscuculha/");
+
+        }
+
+        private void label10_MouseEnter(object sender, EventArgs e)
+        {
+            label10.ForeColor = Color.Blue;
+        }
+
+        private void label10_MouseLeave(object sender, EventArgs e)
+        {
+            label10.ForeColor = Color.Black;
+        }
     }
 }
