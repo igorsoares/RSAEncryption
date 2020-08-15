@@ -74,7 +74,9 @@ namespace RSAEncrypt
         private void btEncrypt_Click(object sender, EventArgs e)
         {
             Criptografar obj_enc = new Criptografar(mainGen);
+            this.Hide();
             obj_enc.ShowDialog();
+            this.Show();
 
 
         }
@@ -87,12 +89,37 @@ namespace RSAEncrypt
 
         private void label10_MouseEnter(object sender, EventArgs e)
         {
-            label10.ForeColor = Color.Blue;
+            labelInstagram.ForeColor = Color.Blue;
         }
 
         private void label10_MouseLeave(object sender, EventArgs e)
         {
-            label10.ForeColor = Color.Black;
+            labelInstagram.ForeColor = Color.Black;
+        }
+
+        private void btDecrypt_Click(object sender, EventArgs e)
+        {
+            Descriptografar frm = new Descriptografar(mainGen);
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void portuguesBRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btGenerate.Text = "Gerar";
+            btMyKeys.Text = "Minhas chaves";
+            btEncrypt.Text = "Encriptar";
+            btDecrypt.Text = "Descriptografar";
+            label1.Text = "RSA é uma criptografia assimétrica. Com par de chaves você pode criptografar e";
+            label2.Text = "descriptografar seus dados.";
+            label4.Text = "O par de chaves pode ser gerado com os seguintes tamanho de chave:";
+            exitToolStripMenuItem.Text = "Opções";
         }
     }
 }

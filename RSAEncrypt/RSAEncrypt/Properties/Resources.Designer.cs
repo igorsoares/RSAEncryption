@@ -73,6 +73,16 @@ namespace RSAEncrypt.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit_icon_4597 {
+            get {
+                object obj = ResourceManager.GetObject("exit-icon-4597", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap github_153_675523 {
             get {
                 object obj = ResourceManager.GetObject("github-153-675523", resourceCulture);

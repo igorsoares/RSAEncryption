@@ -22,3 +22,4 @@ C:\Users\Ígor Henrique\Documents\GitHub\RSAEncryption\RSAEncrypt\RSAEncrypt\obj
 C:\Users\Ígor Henrique\Documents\GitHub\RSAEncryption\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.pdb
 C:\Users\Ígor Henrique\Documents\GitHub\RSAEncryption\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.FORMS.Criptografar.resources
 C:\Users\Ígor Henrique\Documents\GitHub\RSAEncryption\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.csproj.CoreCompileInputs.cache
+C:\Users\Ígor Henrique\Documents\GitHub\RSAEncryption\RSAEncrypt\RSAEncrypt\obj\Debug\RSAEncrypt.FORMS.Descriptografar.resources

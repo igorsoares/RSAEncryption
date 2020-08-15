@@ -27,10 +27,6 @@ namespace RSAEncrypt.ACTIONS
             privateKey = mainRSA.ToXmlString(true);
         }
         
-        public RSACryptoServiceProvider Rcv_obj()
-        {
-            return mainRSA;
-        }
 
     }
 }

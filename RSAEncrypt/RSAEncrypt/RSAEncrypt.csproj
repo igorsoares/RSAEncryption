@@ -53,6 +53,12 @@
     <Compile Include="FORMS\Criptografar.Designer.cs">
       <DependentUpon>Criptografar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMS\Descriptografar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Descriptografar.Designer.cs">
+      <DependentUpon>Descriptografar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\GenerateKey.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FORMS\Criptografar.resx">
       <DependentUpon>Criptografar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Descriptografar.resx">
+      <DependentUpon>Descriptografar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\GenerateKey.resx">
       <DependentUpon>GenerateKey.cs</DependentUpon>
@@ -122,6 +131,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\instagram-bw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-icon-4597.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

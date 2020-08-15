@@ -222,7 +222,7 @@
             this.MinimizeBox = false;
             this.Name = "GenerateKey";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GenerateKey";
+            this.Text = "Generate Key";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
