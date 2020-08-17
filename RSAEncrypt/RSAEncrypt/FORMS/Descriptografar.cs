@@ -23,27 +23,48 @@ namespace RSAEncrypt.FORMS
 
         private void Descriptografar_Load(object sender, EventArgs e)
         {
+            Verifica_linguagem();
+            string lingua = obj.defaultLanguage;
             try
             {
-                int lenght = obj.privateKey.Length;
+                int lenght = obj.publicKey.Length;
+                
                 // se continuar, é pq tem chave
-
-                labelStatus.Text = "Keys found.";
+                if (lingua == "pt-br")
+                    labelStatus.Text = "Chaves OK.";
+                else
+                    labelStatus.Text = "Keys found.";
                 labelStatus.ForeColor = Color.DarkGreen;
-
 
             }
             catch
             {
-                labelStatus.Text = "Gen keys first.";
+                if (lingua == "pt-br")
+                    labelStatus.Text = "Gere as chaves.";
+                else
+                    labelStatus.Text = "Gen keys first.";
                 labelStatus.ForeColor = Color.DarkRed;
                 btDecrypt.Enabled = false;
             }
 
         }
 
+        private void Verifica_linguagem()
+        {
+            if (obj.defaultLanguage == "pt-br")
+            {
+                label2.Text = "Saída";
+                btDecrypt.Text = "Descriptografar";
+                btCopy.Text = "Copiar saída";
+                label3.Text = "Status:";
+
+
+            }
+        }
+
         private void btDecrypt_Click(object sender, EventArgs e)
         {
+            
             btCopy.Enabled = true;
             if (tbEncrypted.Text.Length == 0)
             {
@@ -52,14 +73,21 @@ namespace RSAEncrypt.FORMS
                 tbEncrypted.Focus();
                 return;
             }
-            RSACryptoServiceProvider RSA2 = new RSACryptoServiceProvider();
-            RSA2.FromXmlString(obj.privateKey);
+            //RSACryptoServiceProvider RSA2 = new RSACryptoServiceProvider();
+            //RSA2.FromXmlString(obj.privateKey);
+
+            try
+            {
+                byte[] encrypted = Convert.FromBase64String(tbEncrypted.Text);
+                byte[] decrypted = obj.mainRSA.Decrypt(encrypted, false);
+
+                tbOutput.Text = Encoding.UTF8.GetString(decrypted);
+            }
+            catch
+            {
+                MessageBox.Show("Error. Verify your keys.");
+            }
             
-
-            byte[] encrypted = Convert.FromBase64String(tbEncrypted.Text);
-            byte[] decrypted = RSA2.Decrypt(encrypted, false);
-
-            tbOutput.Text = Encoding.UTF8.GetString(decrypted);
         }
     }
 }

@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelInstagram = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.lbGithub = new System.Windows.Forms.Label();
             this.btDecrypt = new System.Windows.Forms.Button();
@@ -38,6 +40,7 @@
             this.btGenerate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,25 +49,26 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeLanguageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.portuguesBRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btImport = new System.Windows.Forms.Button();
+            this.btPublic = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.btPublic);
+            this.panel1.Controls.Add(this.btImport);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.labelInstagram);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -76,15 +80,25 @@
             this.panel1.Controls.Add(this.btGenerate);
             this.panel1.Location = new System.Drawing.Point(15, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(120, 245);
+            this.panel1.Size = new System.Drawing.Size(120, 318);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::RSAEncrypt.Properties.Resources.instagram_bw;
+            this.pictureBox2.Location = new System.Drawing.Point(5, 252);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // labelInstagram
             // 
             this.labelInstagram.AutoSize = true;
             this.labelInstagram.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelInstagram.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInstagram.Location = new System.Drawing.Point(50, 200);
+            this.labelInstagram.Location = new System.Drawing.Point(49, 262);
             this.labelInstagram.Name = "labelInstagram";
             this.labelInstagram.Size = new System.Drawing.Size(66, 13);
             this.labelInstagram.TabIndex = 7;
@@ -93,12 +107,22 @@
             this.labelInstagram.MouseEnter += new System.EventHandler(this.label10_MouseEnter);
             this.labelInstagram.MouseLeave += new System.EventHandler(this.label10_MouseLeave);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RSAEncrypt.Properties.Resources.github_153_675523;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 218);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.ForeColor = System.Drawing.Color.LightGray;
-            this.label11.Location = new System.Drawing.Point(41, 18);
+            this.label11.Location = new System.Drawing.Point(41, 10);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 13);
             this.label11.TabIndex = 5;
@@ -109,7 +133,7 @@
             this.lbGithub.AutoSize = true;
             this.lbGithub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbGithub.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGithub.Location = new System.Drawing.Point(50, 166);
+            this.lbGithub.Location = new System.Drawing.Point(49, 228);
             this.lbGithub.Name = "lbGithub";
             this.lbGithub.Size = new System.Drawing.Size(44, 13);
             this.lbGithub.TabIndex = 4;
@@ -147,7 +171,7 @@
             this.btMyKeys.Name = "btMyKeys";
             this.btMyKeys.Size = new System.Drawing.Size(108, 23);
             this.btMyKeys.TabIndex = 1;
-            this.btMyKeys.Text = "Show my Keys";
+            this.btMyKeys.Text = "Show my keys";
             this.btMyKeys.UseVisualStyleBackColor = true;
             this.btMyKeys.Click += new System.EventHandler(this.btMyKeys_Click);
             // 
@@ -175,7 +199,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
-            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label1);
@@ -188,6 +211,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(497, 245);
             this.panel2.TabIndex = 18;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Gray;
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(318, 6);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "V1.3";
             // 
             // label9
             // 
@@ -269,35 +303,6 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "The pair key can be generated with some lenghts:";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::RSAEncrypt.Properties.Resources.instagram_bw;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 190);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RSAEncrypt.Properties.Resources.github_153_675523;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 156);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(188, 224);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "V1.3";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Gray;
@@ -325,21 +330,22 @@
             this.englishToolStripMenuItem,
             this.portuguesBRToolStripMenuItem});
             this.changeLanguageToolStripMenuItem.Name = "changeLanguageToolStripMenuItem";
-            this.changeLanguageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changeLanguageToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.changeLanguageToolStripMenuItem.Text = "Change Language";
             // 
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.englishToolStripMenuItem.Text = "English (EU)";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // portuguesBRToolStripMenuItem
             // 
             this.portuguesBRToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.portuguesBRToolStripMenuItem.Name = "portuguesBRToolStripMenuItem";
-            this.portuguesBRToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.portuguesBRToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.portuguesBRToolStripMenuItem.Text = "Portugues (BR)";
             this.portuguesBRToolStripMenuItem.Click += new System.EventHandler(this.portuguesBRToolStripMenuItem_Click);
             // 
@@ -347,16 +353,39 @@
             // 
             this.exitToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
+            // 
+            // btImport
+            // 
+            this.btImport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btImport.Location = new System.Drawing.Point(5, 150);
+            this.btImport.Name = "btImport";
+            this.btImport.Size = new System.Drawing.Size(107, 23);
+            this.btImport.TabIndex = 9;
+            this.btImport.Text = "Import private";
+            this.btImport.UseVisualStyleBackColor = true;
+            this.btImport.Click += new System.EventHandler(this.btImport_Click);
+            // 
+            // btPublic
+            // 
+            this.btPublic.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btPublic.Location = new System.Drawing.Point(5, 179);
+            this.btPublic.Name = "btPublic";
+            this.btPublic.Size = new System.Drawing.Size(107, 23);
+            this.btPublic.TabIndex = 10;
+            this.btPublic.Text = "Import public";
+            this.btPublic.UseVisualStyleBackColor = true;
+            this.btPublic.Click += new System.EventHandler(this.btPublic_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(650, 284);
+            this.ClientSize = new System.Drawing.Size(650, 362);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
@@ -373,10 +402,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -413,6 +442,8 @@
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem portuguesBRToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.Button btImport;
+        private System.Windows.Forms.Button btPublic;
     }
 }
 

@@ -44,9 +44,9 @@
             // 
             this.btCopy.Enabled = false;
             this.btCopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btCopy.Location = new System.Drawing.Point(285, 190);
+            this.btCopy.Location = new System.Drawing.Point(263, 190);
             this.btCopy.Name = "btCopy";
-            this.btCopy.Size = new System.Drawing.Size(87, 23);
+            this.btCopy.Size = new System.Drawing.Size(132, 23);
             this.btCopy.TabIndex = 17;
             this.btCopy.Text = "Copy Output";
             this.btCopy.UseVisualStyleBackColor = true;
@@ -72,9 +72,9 @@
             // btDecrypt
             // 
             this.btDecrypt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btDecrypt.Location = new System.Drawing.Point(285, 163);
+            this.btDecrypt.Location = new System.Drawing.Point(263, 163);
             this.btDecrypt.Name = "btDecrypt";
-            this.btDecrypt.Size = new System.Drawing.Size(87, 23);
+            this.btDecrypt.Size = new System.Drawing.Size(132, 23);
             this.btDecrypt.TabIndex = 13;
             this.btDecrypt.Text = "Decrypt";
             this.btDecrypt.UseVisualStyleBackColor = true;

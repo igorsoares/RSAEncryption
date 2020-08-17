@@ -19,21 +19,44 @@ namespace RSAEncrypt.FORMS
             main_gen = obj;
         }
 
+        private void Verifica_linguagem()
+        {
+            if(main_gen.defaultLanguage == "pt-br")
+            {
+                label2.Text = "Saída";
+                btEncrypt.Text = "Criptografar";
+                btCopy.Text = "Copiar saída";
+                label3.Text = "Status:";
+                
+
+            }
+        }
+
         private void Criptografar_Load(object sender, EventArgs e)
         {
+            string lingua = main_gen.defaultLanguage;
             try
             {
-                int lenght = main_gen.privateKey.Length;
-                // se continuar, é pq tem chave
+                // Verifica a linguagem selecionada (pt-BR / eu_USA)
+                Verifica_linguagem();
 
-                labelStatus.Text = "Keys found.";
+                int lenght = main_gen.publicKey.Length;
+                // se continuar, é pq tem chave
+                
+                if(lingua == "pt-br")
+                    labelStatus.Text = "Chaves OK.";
+                else
+                    labelStatus.Text = "Keys found.";
                 labelStatus.ForeColor = Color.DarkGreen;
                 
 
             }
             catch 
             {
-                labelStatus.Text = "Gen keys first.";
+                if(lingua == "pt-br")
+                    labelStatus.Text = "Gere as chaves.";
+                else
+                    labelStatus.Text = "Gen keys first.";
                 labelStatus.ForeColor = Color.DarkRed;
                 btEncrypt.Enabled = false;
             }

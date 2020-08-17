@@ -16,6 +16,8 @@ namespace RSAEncrypt.ACTIONS
         public RSACryptoServiceProvider mainRSA;
         public string publicKey { get; set; }
         public string privateKey { get; set; }
+        public string defaultLanguage { get; set; }
+
         public Gen_Rec()
         {
 
@@ -27,6 +29,11 @@ namespace RSAEncrypt.ACTIONS
             privateKey = mainRSA.ToXmlString(true);
         }
         
+        public void importPublicKey(RSACryptoServiceProvider impPublic)
+        {
+            mainRSA = impPublic;
+            publicKey = mainRSA.ToXmlString(false);
+        }
 
     }
 }

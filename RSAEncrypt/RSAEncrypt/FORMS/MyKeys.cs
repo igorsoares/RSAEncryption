@@ -19,14 +19,41 @@ namespace RSAEncrypt.FORMS
         {
             InitializeComponent();
 
-            tbPublic.Text = mainGen.mainRSA.ToXmlString(false);
-            tbPrivate.Text = mainGen.mainRSA.ToXmlString(true);
+            try
+            {
+                if (mainGen.mainRSA.ToXmlString(false).Length > 0)
+                    tbPublic.Text = mainGen.mainRSA.ToXmlString(false);
+            }
+            catch
+            {
+                tbPublic.Text = "";
+            }
+
+
+            try
+            {
+                if (mainGen.mainRSA.ToXmlString(true).Length > 0)
+                    tbPrivate.Text = mainGen.mainRSA.ToXmlString(true);
+
+            }
+            catch
+            {
+                tbPrivate.Text = "";
+            }
+
             this.mainGen = mainGen;
         }
 
         private void MyKeys_Load(object sender, EventArgs e)
         {
-            labelLenght.Text = mainGen.mainRSA.KeySize.ToString();
+            try
+            {
+                labelLenght.Text = mainGen.mainRSA.KeySize.ToString();
+            }
+            catch
+            {
+                labelLenght.Text = "";
+            }
         }
     }
 }
